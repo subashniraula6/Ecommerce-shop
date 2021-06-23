@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../includes/head.ejs') %>
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+            <main>
+                <% if(orders.length> 0){ %>
+                    <div class="orders-container">
+                        <ul>
+                            <% orders.forEach(order => { %>
+                                <li>
+                                    <h1>
+                                        <%= order._id %>
+                                        <a href="/orders/<%=order._id%>">Invoice</a>
+                                    </h1>
+                                    <ul>
+                                        <% order.products.forEach(product=> { %>
+                                            <li>
+                                                <h2>
+                                                    <%= product.product.title %>
+                                                    (<%= product.quantity %>)
+                                            </h2>
+                                            </li>
+                                            <% }) %>
+                                    </ul>
+                                </li>
+                                <% }) %>
+                        </ul>
+                    </div>
+                    <hr>
+                    <form action="/checkout" method="POST">
+                        <input type="hidden" name='_csrf' value="<%= csrfToken %>" >
+                    </form>
+                    <% } else { %>
+                        <h1>No orders yet</h1>
+                        <% } %>
+            </main>
+    </body>
+
+    <%- include('../includes/end.ejs') %>

@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 80%;
+}
+main ul {
+    margin: auto;
+    padding: 10px;
+    width: 700px;
+}
+main ul li {
+    list-style: none;
+    margin: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+li h2, p, form  {
+    color: rgb(70, 59, 80);
+    margin: 0.8rem 1rem;
+}
+h2 {
+    width: 200px;
+}
+li p {
+    font-size: 1.1rem;
+}
+.quantity-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-left: 20px;
+}

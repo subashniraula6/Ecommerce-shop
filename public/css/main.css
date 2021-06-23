@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+main {
+  padding: 1rem;
+  margin: auto;
+}
+
+.main-header {
+  width: 100%;
+  height: 3.5rem;
+  background-color: #00695c;
+  padding: 0 1.5rem;
+}
+
+.main-header__nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0.5rem;
+}
+
+.main-header__item-list, .admin-controller__item-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.main-header__item {
+  margin: 0 1rem;
+  padding: 0;
+}
+
+.main-header__item a {
+  text-decoration: none;
+  color: white;
+}
+
+.main-header__item a:hover,
+.main-header__item a:active,
+.main-header__item a.active {
+  color: #ffeb3b;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+}
+
+.card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  margin: 15px 5px;
+}
+
+.card__header,
+.card__content {
+  padding: 1rem;
+}
+
+.card__header h1,
+.card__content h1,
+.card__content h2,
+.card__content p {
+  margin: auto;
+}
+
+.card__image {
+  width: 100%;
+}
+
+.card__image img {
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  display: block;
+}
+
+.card__actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+}
+
+.card__actions button,
+.card__actions a {
+    margin: 0 0.25rem;
+}
+
+.btn {
+  font: inherit;
+  border: 1px solid #00695c;
+  color: #00695c;
+  background: white;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 10px;
+  padding: 5px 10px;
+}
+.btn-secondary {
+  border: 1px solid red;
+  color: red;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+  background-color: red !important;
+  color: white !important;
+}
+.btn:hover,
+.btn:active {
+  background-color: #00695c;
+  color: white;
+}
+
+.centered {
+  margin: 15px auto;
+  width: fit-content;
+  display: block;
+}
+.btn-transparent {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.btn-transparent:hover{
+  color: #ffeb3b;
+}
+.user-message {
+  margin: auto;
+  width: 30rem; 
+  padding: 0.5rem;
+  text-align: center;
+  margin-top: 5rem;
+
+}
+.user-message--error {
+background-color: rgb(250, 199, 199);
+color:rgb(255, 11, 11);
+border:rgb(231, 10, 10) 1px solid;
+}
+#forget-password {
+  display: block;
+  margin: auto;
+  text-decoration: none;
+  width: 9rem;
+  color: #d43024;
+}
+input.invalid {
+  border-color: #d43024 !important;
+}
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+.pagination a{
+  margin: 5px;
+  border: 1px solid green;
+  text-decoration: none;
+  background-color: aliceblue;
+  color: green;
+  padding: 10px;
+}
+.pagination a:hover{
+  background-color: green;
+  color: aliceblue;
+}
+.pagination a.active{
+  background-color: green;
+  color: aliceblue;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../includes/head.ejs') %>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    </head>
+
+    <body>
+        <%- include('../includes/navigation.ejs') %>
+            <main>
+                <ul>
+                    <% products.forEach(product=> { %>
+                        <li>
+                            <h2>
+                                <%= product.productId.title %>
+                            </h2>
+                            <h3 style="text-align: end; margin-right: 30px">
+                                Quantity: <%= product.quantity %>
+                            </h3>
+                        </li>
+                        <% }) %>
+                </ul>
+                <div>
+                    <h2 class="centered">
+                        Total: <%= totalSum %>
+                    </h2>
+                </div>
+                <div class="centered">
+                    <button id='order-btn' class="btn">ORDER</button>
+                    <script src="https://js.stripe.com/v3/"></script>
+                    <script>
+                        var stripe = new Stripe('pk_test_51HI9ZAIWnLKPmap4xpbSBWGctmMzzKA6BVRXbxiKNIpijh5KfxCZ8LTIWJafIFkqoCPBgRXQ2VI7Q5B2iAnF8Xb100Y2VFUTeC') 
+                        document.getElementById('order-btn').addEventListener('click', function (event) {
+                            console.log('I am clicked')
+                            stripe.redirectToCheckout({
+                                sessionId: '<%= sessionId %>'
+                            });
+                        })
+                    </script>
+                </div>
+            </main>
+    </body>
+
+    <%- include('../includes/end.ejs') %>
